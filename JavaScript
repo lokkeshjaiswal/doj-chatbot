@@ -1,0 +1,18 @@
+// script.js
+function sendMessage() {
+    let userInput = document.getElementById('userInput').value;
+    let messages = document.getElementById('messages');
+
+    // Display user's message
+    let userMessage = document.createElement('div');
+    userMessage.textContent = 'You: ' + userInput;
+    messages.appendChild(userMessage);
+
+    // Here you'd call the backend API for a response (to be implemented)
+    let botResponse = document.createElement('div');
+    botResponse.textContent = 'Bot: (response goes here)';
+    messages.appendChild(botResponse);
+
+    // Clear input field
+    document.getElementById('userInput').value = '';
+}
